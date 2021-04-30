@@ -5,14 +5,14 @@
   Time: 11:53 a. m.
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>
 <%@ page import="co.edu.sena.Nomina1.model.vo.PersonaVO"%>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-419">
 <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-    <meta charset="UTF-8">
     <title>Resultado nomina</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
