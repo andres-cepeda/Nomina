@@ -9,28 +9,28 @@
 <body>
 <div class="container">
     <header>
-        <h1>Datos Nomina</h1>
+        <h1>Datos Nómina</h1>
     </header>
     <nav></nav>
     <section>
         <form action="NominaServlet" method="post" >
             <label for="Nombre"><%="Nombres:"%></label>
-            <input type="text" id="Nombre"  maxlength="20" name="Nombre" class="form-control" pattern="[A-Za-z ]{2,30}" placeholder="Nombre" autofocus required>
+            <input type="text" id="Nombre"  maxlength="20" name="Nombre" class="form-control" pattern="[A-Za-zÑ-ñ ]{2,30}" placeholder="Nombre" autofocus required>
             <br>
-            <label for="Apellido"><%="Apellido:"%></label>
-            <input type="text" id="Apellido" name="Apellido" class="form-control" pattern="[A-Za-z ]{2,30}" placeholder="Apellido"  required>
+            <label for="Apellido"><%="Apellidos:"%></label>
+            <input type="text" id="Apellido" name="Apellido" class="form-control" pattern="[A-Za-zÑ-ñ ]{2,30}" placeholder="Apellido"  required>
             <br>
-            <label for="Docuemnto"><%="Docuemnto:"%></label>
-            <input type="number" id="Docuemnto" name="Docuemnto" class="form-control" pattern="[A-Za-z ]{2,30}" placeholder="Docuemnto"  required>
+            <label for="Docuemnto"><%="Documento:"%></label>
+            <input type="number" id="Docuemnto" name="Docuemnto" class="form-control" pattern="[A-Za-zÑ-ñ0-9 ]{2,30}" placeholder="Docuemnto"  required>
             <br>
             <label for="Nivel"><%="Nivel de riesgo:"%></label>
-            <input type="number" id="Nivel" name="Nivel" class="form-control" pattern="[A-Za-z ]{2,30}" placeholder="Nivel de riesgo"  required>
+            <input type="number"  id="Nivel" name="Nivel" class="form-control" min="1" max="5" placeholder="Nivel de riesgo"  required>
             <br>
-            <label for="DiasTrabajados"><%="DiasTrabajados:"%></label>
-            <input type="number" id="DiasTrabajados" name="DiasTrabajados" class="form-control" pattern="{2,30}" placeholder="Dias trabajados"  required>
+            <label for="DiasTrabajados"><%="Dias trabajados:"%></label>
+            <input type="number" id="DiasTrabajados" name="DiasTrabajados" class="form-control" pattern="[0-9 ]{2,30}" placeholder="Dias trabajados"  required>
             <br>
-            <label for="SueldoMensual"><%="SueldoMensual:"%></label>
-            <input type="number" id="SueldoMensual" name="SueldoMensual" class="form-control" pattern="{2,30}" placeholder="Sueldo mensual"  required>
+            <label for="SueldoMensual"><%="Sueldo mensual:"%></label>
+            <input type="number" id="SueldoMensual" name="SueldoMensual" class="form-control" pattern="[0-9 ]{2,30}" placeholder="Sueldo mensual"  required>
             <br>
             <input type="submit" name="btnNomina" value="Calcular nomina" class="btn btn-primary">
         </form>

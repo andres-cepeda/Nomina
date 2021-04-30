@@ -14,11 +14,14 @@
     <meta charset="UTF-8">
     <title>Resultado nomina</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-</head>
+</head> 
 <body>
 <div class="container">
 
-    <nav></nav>
+    <nav>
+        <br>
+        <a href="index.jsp" style="margin-left: 1.5%"><button class="btn btn-secondary">Atras</button></a>
+    </nav>
     <section>
         <% PersonaVO Datos=(PersonaVO) request.getAttribute("Datos");%>
 
@@ -27,7 +30,7 @@
             <thead>
 
             <tr class="thead-dark" align="center">
-                <th colspan="12">Liquidación Nomina</th>
+                <th colspan="12">Liquidación nómina</th>
 
             </tr>
             <tr class="thead-dark" align="center">
@@ -41,14 +44,14 @@
                 <th>Nombres</th>
                 <th>Apellidos</th>
                 <th>Documento</th>
-                <th>Dias trabajados</th>
-                <th>Sueldo Mensual</th>
-                <th>Subcidio</th>
+                <th>Días trabajados</th>
+                <th>Sueldo mensual</th>
+                <th>Subsidio</th>
                 <th>Devengos</th>
                 <th>Salud</th>
-                <th>Pension</th>
+                <th>Pensión</th>
                 <th>ARL</th>
-                <th>Cesantias</th>
+                <th>Cesantías</th>
                 <th>Sueldo total</th>
             </tr>
             </thead>
@@ -58,7 +61,7 @@
                 <td><%= Datos.getApellido()%></td>
                 <td><%= Datos.getDocuemnto()%></td>
                 <td><%= Datos.getDiasTrabajados() %></td>
-                <td><%= Datos.getSueldoMensual()%></td>
+                <td><%= Datos.getSueldo()%></td>
                 <td><%= Datos.getSubsidio()%></td>
                 <td><%= Datos.getDevengos() %></td>
                 <td><%= Datos.getSalud() %></td>
@@ -71,9 +74,6 @@
 
         </table>
         <br>
-        <a href="index.jsp" style="margin-left: 1.5%"><button class="btn btn-secondary">Atras</button></a>
-
-
 
     </section>
     <footer></footer>

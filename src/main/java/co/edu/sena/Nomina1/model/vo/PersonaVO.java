@@ -7,6 +7,7 @@ public class PersonaVO {
     private int Docuemnto;
     private int DiasTrabajados;
     private int SueldoMensual;
+    private int Sueldo;
     private int subsidio;
     private int salud;
     private int pension;
@@ -51,8 +52,16 @@ public class PersonaVO {
         return SueldoMensual;
     }
 
-    public void setSueldoMensual(int sueldoMensual) {
-        SueldoMensual = sueldoMensual;
+    public void setSueldoMensual(int SueldoMensual) {
+        SueldoMensual = SueldoMensual;
+    }
+
+    public int getSueldo() {
+        return Sueldo;
+    }
+
+    public void setSueldo(int Sueldo) {
+        this.Sueldo = Sueldo;
     }
 
     public int getSubsidio(){ return subsidio;}

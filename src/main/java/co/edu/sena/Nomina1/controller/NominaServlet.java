@@ -19,12 +19,13 @@ public class NominaServlet extends HttpServlet {
         int salud =0 ;
         int pension =0 ;
         int SueldoMensual = 0;
+        int sueldo =0;
         int SMLV = 1817052;
         int subsidio =0 ;
-        int cesantía=0;
-        int devengos=0;
-        int total=0;
-        int arl=0;
+        int cesantía =0;
+        int devengos =0;
+        int total =0;
+        int arl =0;
 
 
 
@@ -35,9 +36,10 @@ public class NominaServlet extends HttpServlet {
         int DiasTrabajados = Integer.parseInt(request.getParameter("DiasTrabajados"));
         SueldoMensual = Integer.parseInt(request.getParameter("SueldoMensual"));
 
-        SueldoMensual = SueldoMensual*DiasTrabajados/30;
-        salud = (int) (SueldoMensual*0.04);
-        pension = (int) (SueldoMensual*0.04);
+
+        sueldo = ((SueldoMensual*DiasTrabajados)/30);
+        salud = (int) (sueldo*0.04);
+        pension = (int) (sueldo*0.04);
 
         if(Nivel == 1)
         {
@@ -63,22 +65,30 @@ public class NominaServlet extends HttpServlet {
                     }
                     else
                     {
-                        arl = 63233;
+                        if(Nivel == 5)
+                        {
+                            arl = 63233;
+                        }
+                        else
+                        {
+                            System.out.println("Rango no existe");
+                        }
                     }
                 }
             }
         }
 
-        devengos=(SueldoMensual+subsidio);
+
         if(SueldoMensual<= SMLV)
         {
 
-            subsidio= SueldoMensual + 106054;
+            subsidio= (106054/30)*DiasTrabajados;
         }
         else
         {
             subsidio=0;
         }
+        devengos=(sueldo+subsidio);
         cesantía = (salud+pension+arl);
         total=(devengos-cesantía);
 
@@ -86,7 +96,7 @@ public class NominaServlet extends HttpServlet {
         Datos.setApellido(Apellido);
         Datos.setDocuemnto(Docuemnto);
         Datos.setDiasTrabajados(DiasTrabajados);
-        Datos.setSueldoMensual(SueldoMensual);
+        Datos.setSueldo(sueldo);
         Datos.setSalud(salud);
         Datos.setPension(pension);
         Datos.setArl(arl);
